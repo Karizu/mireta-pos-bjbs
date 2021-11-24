@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/very_light_pink">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/d16"
+                android:layout_marginBottom="@dimen/d16"
+                android:layout_height="@dimen/d100">
+
+                <ImageView
+                    android:id="@+id/image_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_bjbs" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POS"
+                    android:layout_marginStart="@dimen/d4"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mireta_blue"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/d35"
+                android:paddingRight="@dimen/d35"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d40"
+                    android:background="@drawable/border_round_white"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/s17" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d15"
+                    android:background="@android:color/transparent"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d40"
+                    android:background="@drawable/border_round_white"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:id="@+id/input_password"
+                    android:textSize="@dimen/s17"
+                    android:textAlignment="center"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d15"
+                    android:background="@android:color/transparent"/>
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d40"
+                    android:textSize="@dimen/s20"
+                    android:background="@drawable/border_round_gradient"
+                    android:text="LOGIN"
+                    android:textColor="@color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center|center_vertical">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mireta_blue"
+                        android:id="@+id/text_info_forgot_password"
+                        android:text="Lupa password? "/>
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mireta_blue"
+                        android:id="@+id/forgot_text"
+                        android:text="Klik Disini"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/d8"
+                android:gravity="center|center_vertical">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_info_register"
+                    android:textColor="@color/mireta_blue"
+                    android:text="Tokomu belum punya Mireta POS? "/>
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_text"
+                    android:textColor="@color/mireta_blue"
+                    android:text="Daftar"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/mireta_blue"
+                android:text="Powered By"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="@dimen/d100"
+                android:layout_height="@dimen/d50"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

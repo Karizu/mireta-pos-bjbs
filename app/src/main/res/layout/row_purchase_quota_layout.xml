@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/d15"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/info"
+                android:text="ITEM"
+                android:textSize="@dimen/s20"
+                android:textColor="@color/black"/>
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/s12"
+                android:textColor="@color/red"
+                android:text="PRICE"
+                android:layout_marginLeft="@dimen/d10"
+                android:id="@+id/price"/>
+        </LinearLayout>
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:text="Description"
+            android:visibility="gone"
+            />
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Aktif 30 Hari"/>
+    </LinearLayout>
+
+</LinearLayout>

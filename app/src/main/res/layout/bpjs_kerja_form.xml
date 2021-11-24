@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/d20">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bpjs_ketenagakerjaan"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:hint="@string/hint_name_bpjs"
+            android:textColorHint="@color/black"
+            android:id="@+id/name_cust_bpjs"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/d20"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:layout_marginTop="@dimen/d20"
+            android:hint="@string/hint_phone_bpjs"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:layout_marginTop="@dimen/d20"
+            android:hint="@string/hint_mothers_name_bpjs"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"/>
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d20"
+            android:text="Foto KTP"/>
+
+        <Button
+            android:layout_width="@dimen/d80"
+            android:layout_height="@dimen/d20"
+            android:textSize="10sp"
+            android:layout_marginTop="@dimen/d10"
+            android:text="Pilih file"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/border_round_light_blue"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d20"
+            android:orientation="horizontal">
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto Kartu Keluarga"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoLightTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="7sp"
+                android:text="(opsional)"/>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="@dimen/d80"
+            android:layout_height="@dimen/d20"
+            android:textSize="10sp"
+            android:layout_marginTop="@dimen/d10"
+            android:text="Pilih file"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/border_round_light_blue"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Dengan menekan tombol ini, anda telah menyetujui persyaratan dan aturan yang berlaku"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/info_aggrement"
+                android:textAlignment="center"
+                android:layout_above="@+id/approve_btn"
+                android:layout_marginBottom="@dimen/d10"/>
+
+            <Button
+                android:layout_width="@dimen/d120"
+                android:layout_height="@dimen/d40"
+                android:background="@drawable/green_button"
+                android:textColor="@color/white"
+                android:id="@+id/approve_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:text="setuju"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

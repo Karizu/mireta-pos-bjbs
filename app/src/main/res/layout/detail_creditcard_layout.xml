@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_visa_master"
+                    android:id="@+id/image_card"
+                    android:layout_marginBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit"
+                        android:visibility="gone"
+                        android:id="@+id/edit_card"
+                        android:textColor="@color/aquamarine.primary"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:textColorHint="@color/Black"
+                android:hint="Nomor Kartu Kredit"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:enabled="false"
+                android:id="@+id/card_number"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:textColorHint="@color/Black"
+                android:layout_marginTop="@dimen/d10"
+                android:hint="Masa Berlaku"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:enabled="false"
+                android:id="@+id/expired_date"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/white"
+                    android:text="Aktifkan Kartu"
+                    android:id="@+id/activate_button"
+                    android:gravity="center"
+                    android:background="@drawable/green_button"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

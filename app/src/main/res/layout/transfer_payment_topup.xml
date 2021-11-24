@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/very_light_pink">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/d15"
+            android:padding="@dimen/d15"
+            android:background="@drawable/border_round_light_gray">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <ImageView
+                    android:layout_width="@dimen/d80"
+                    android:layout_height="@dimen/d30"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_transfer"
+                    android:scaleType="fitEnd"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/s12"
+                        android:textColor="@color/black"
+                        android:text="TOTAL"
+                        android:layout_marginBottom="@dimen/d5"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_amount"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="Rp 0.00"/>
+                    </LinearLayout>
+
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/d9"
+                        android:layout_marginTop="@dimen/d10"
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="@dimen/d20"
+                        android:textColor="@color/gray.primary_dark"
+                        android:layout_marginBottom="@dimen/d15"
+                        android:text="Transfer sesuai dengan jumlah yang tercantum 3 digits terakhir mempermudah verifikasi"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/bank_container">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/d15"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoLightTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/s14"
+                            android:text="Nama Rekening"/>
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/s25"
+                            android:textColor="@color/black"
+                            android:id="@+id/account_name"
+                            android:text="PEMEGANG REKENING"
+                            android:layout_marginTop="@dimen/d10"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d1"
+                        android:background="@color/starDust_opacity_40"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/d15"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/d30"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/bank_logo"
+                            android:src="@drawable/ic_bank_mandiri"
+                            />
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/s17"
+                            android:textColor="@color/black"
+                            android:text="1234567890"
+                            android:textAlignment="textEnd"
+                            android:gravity="end"
+                            android:textIsSelectable="true"
+                            android:id="@+id/account_number"/>
+                    </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d1"
+                        android:background="@color/starDust_opacity_40"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/d15"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SISA WAKTU"
+                    android:textAlignment="center"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/d10">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/s25"
+                        android:textColor="@color/red"
+                        android:id="@+id/failure_text"
+                        android:textAlignment="center"
+                        android:visibility="gone"
+                        android:text="GAGAL"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/container_countdown"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/s25"
+                                android:textColor="#2CC013"
+                                android:id="@+id/jam"
+                                android:text="01"/>
+                        </LinearLayout>
+
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/d5"
+                            android:layout_marginRight="@dimen/d5"
+                            android:text=":"
+                            android:textSize="@dimen/s25"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/s25"
+                                android:id="@+id/menit"
+                                android:textColor="#2CC013"
+                                android:text="01"/>
+                        </LinearLayout>
+
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/d5"
+                            android:layout_marginRight="@dimen/d5"
+                            android:text=":"
+                            android:textSize="@dimen/s25"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#2CC013"
+                                android:id="@+id/detik"
+                                android:textSize="@dimen/s25"
+                                android:text="01"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/note_expired_time"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/s25"
+                            android:textColor="#2CC013"
+                            android:text="WAKTU HABIS"/>
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoLightTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Harap Melakukan Konfirmasi Bantuan Ke Customer Service"
+                            android:textSize="@dimen/s10"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=": "/>
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1234"
+                        android:id="@+id/order_id_text"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/date"
+                        android:text="12 Jan 2018"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=", "/>
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/time"
+                        android:text="13:01:24"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d1"
+                android:background="@color/starDust_opacity_40"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/border_round_blue_gradient"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/next_btn"
+                android:layout_marginTop="@dimen/d20"
+                android:text="SUDAH TRANSFER"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d20"
+                android:layout_marginBottom="@dimen/d20"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="@dimen/s10"
+                android:text="Konfirmasi jika sudah transfer"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

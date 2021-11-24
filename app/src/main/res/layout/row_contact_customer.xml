@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#000"
+        android:padding="@dimen/d15"
+        android:background="@drawable/border_bottom"
+        tools:text="A"/>
+    <LinearLayout
+        android:id="@id/container"
+        android:background="@drawable/border_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/d15"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contact_avatar_iv"
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d50"
+            android:layout_marginRight="@dimen/d10"
+            android:src="@drawable/ic_avatar" />
+
+        <TextView
+            android:id="@+id/contact_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Muhammad Fariz"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s15" />
+    </LinearLayout>
+</LinearLayout>

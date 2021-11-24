@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/d30">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:background="@color/transparent"
+            android:inputType="text"
+            android:textSize="@dimen/s14"
+            android:id="@+id/no"
+            android:hint="Nomor Karcis Parkir"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:layout_below="@+id/no"
+            android:id="@+id/underline"
+            android:background="@color/starDust_opacity_40"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Silahkan masukkan nomor karcis parkir anda untuk konfirmasi selesai parkir"
+            android:layout_below="@id/underline"
+            android:layout_marginTop="@dimen/d10"
+            android:textColor="#3C92CA"
+            />
+
+        <Button
+            android:layout_width="@dimen/d170"
+            android:layout_height="@dimen/d40"
+            android:text="Selesai Parkir"
+            android:textColor="@color/white"
+            android:id="@+id/next_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/d30"
+            android:background="@drawable/green_button"/>
+    </RelativeLayout>
+</LinearLayout>

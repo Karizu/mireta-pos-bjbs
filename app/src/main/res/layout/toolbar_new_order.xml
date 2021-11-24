@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d55"
+    android:id="@+id/toolbar"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp"
+    android:alpha="1.0">
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="@dimen/d50"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/button_close_order"
+                android:src="@drawable/ic_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/d13"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:id="@+id/hometoolbar_title"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:text="PEMBAYARAN"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/Black"
+                    android:layout_marginRight="@dimen/d50"
+                    android:textSize="@dimen/d20"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

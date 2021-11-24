@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modul.old.feed.FeedChatFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.paging.listview.PagingListView
+            android:id="@+id/feed_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.paging.listview.PagingListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/empty">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d100"
+            android:id="@+id/img_empty"
+            android:src="@drawable/ic_nochat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/d70"
+            />
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_empty"
+            android:id="@+id/text_empty_title"
+            android:layout_marginTop="@dimen/d15"
+            android:text="Belum ada chat"
+            android:textSize="@dimen/s16"
+            android:textColor="@color/black"
+            />
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text_empty_title"
+            android:id="@+id/text_empty"
+            android:layout_marginTop="@dimen/d5"
+            android:textSize="@dimen/s12"
+            android:text="Transfer dan Request sekarang"
+            android:textColor="@color/black"
+            />
+    </RelativeLayout>
+</FrameLayout>

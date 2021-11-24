@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="horizontal"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingVertical="10dp"
+        android:paddingLeft="7dp"
+        android:gravity="left"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/message_body_left"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/chat_buble_left"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:textColor="#fff"
+            android:textSize="18dp">
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right"
+                android:orientation="vertical"
+                android:padding="@dimen/d10"
+                android:background="@drawable/chat_bubble_top">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_tv_left"
+                        android:text="REQUEST"
+                        android:textSize="@dimen/d10"
+                        android:textColor="#fff" />
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/d7"
+                        android:id="@+id/checklist_iv_left"
+                        android:layout_width="@dimen/d13"
+                        android:layout_height="@dimen/d13"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/checklist" />
+
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/d4">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/amount_tv_left"
+                        android:text="Rp 1.000.000"
+                        android:textSize="@dimen/d22"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#fff" />
+                </FrameLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+                <FrameLayout
+                    android:id="@+id/normal_frame_left"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/status_action_tv_left"
+                            android:text="TUNGGU"
+                            android:textSize="@dimen/d13"
+                            android:textColor="#fff" />
+
+                        <ImageView
+                            android:id="@+id/arrow_detail_iv_left"
+                            android:layout_width="@dimen/d13"
+                            android:layout_height="@dimen/d13"
+                            android:layout_marginLeft="@dimen/d7"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:id="@+id/action_button_left"/>
+                </FrameLayout>
+                <LinearLayout
+                    android:id="@+id/waiting_frame_left"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TOLAK"
+                                android:textSize="@dimen/d13"
+                                android:textColor="#fff" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:id="@+id/action_button_left_reject"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TERIMA"
+                                android:textSize="@dimen/d13"
+                                android:textColor="#fff" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:id="@+id/action_button_left_accept"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingRight="7dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/message_body_right"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/chat_buble_right"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:textColor="#fff"
+            android:textSize="18dp">
+
+            <LinearLayout
+                android:layout_width="156dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left"
+                android:orientation="vertical"
+                android:padding="@dimen/d10"
+                android:background="@drawable/chat_bubble_top">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_tv_right"
+                        android:text="REQUEST"
+                        android:textSize="@dimen/d10"
+                        android:textColor="#fff" />
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/d7"
+                        android:id="@+id/checklist_iv_right"
+                        android:layout_width="@dimen/d13"
+                        android:layout_height="@dimen/d13"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/checklist" />
+
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/d4">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/amount_tv_right"
+                        android:text="Rp 1.000.000"
+                        android:textSize="@dimen/d22"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#fff" />
+                </FrameLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="156dp"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/normal_frame_right"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/status_action_tv_right"
+                            android:text="TUNGGU"
+                            android:textSize="@dimen/d13"
+                            android:textColor="#fff" />
+
+                        <ImageView
+                            android:id="@+id/arrow_detail_iv_right"
+                            android:layout_width="@dimen/d13"
+                            android:layout_height="@dimen/d13"
+                            android:layout_marginLeft="@dimen/d7"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:id="@+id/action_button_right"/>
+                </FrameLayout>
+                <LinearLayout
+                    android:id="@+id/waiting_frame_right"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TOLAK"
+                                android:textSize="@dimen/d13"
+                                android:textColor="#fff" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:id="@+id/action_button_right_reject"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TERIMA"
+                                android:textSize="@dimen/d13"
+                                android:textColor="#fff" />
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:id="@+id/action_button_right_accept"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

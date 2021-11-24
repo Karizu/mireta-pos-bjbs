@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/d50"
+        android:gravity="center_vertical"
+        android:background="@drawable/border_bottom">
+        <RelativeLayout
+            android:layout_width="@dimen/d50"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/d50"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_left"
+                android:id="@+id/backButton"
+                android:padding="@dimen/d8"/>
+        </RelativeLayout>
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:id="@+id/hometoolbar_title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="KODE OTP"
+            android:textAllCaps="true"
+            android:layout_marginRight="@dimen/d50"
+            android:textSize="@dimen/s18"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d60"
+            android:background="@drawable/border_round_light_gray"
+            android:hint="VERIFIKASI"
+            android:inputType="numberPassword"
+            android:layout_marginHorizontal="@dimen/d20"
+            android:digits="1234567890"
+            android:id="@+id/txt_pin_entry"
+            android:textSize="@dimen/s30"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:maxLength="6"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1"
+            android:background="@color/colorPrimary"
+            android:layout_margin="@dimen/d20"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum menerima kode ? "/>
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resend_text"
+                android:text="Kirim ulang"/>
+        </LinearLayout>
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/countdown_text"
+            android:layout_marginTop="@dimen/d20"
+            android:layout_gravity="center"
+            android:text="01.00"/>
+    </LinearLayout>
+</LinearLayout>

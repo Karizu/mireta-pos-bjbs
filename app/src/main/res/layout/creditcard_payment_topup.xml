@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/d30">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/s12"
+                    android:text="TOP UP Saldo"/>
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/s25"
+                    android:id="@+id/amount"
+                    android:text=""/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:layout_weight="2">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_visa_master"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:hint="Nomor Kartu Kredit"
+            android:id="@+id/card_number"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:textSize="@dimen/s14"
+            android:layout_marginTop="@dimen/d30"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_marginTop="@dimen/d20"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/s14"
+                    android:id="@+id/date"
+                    android:inputType="datetime"
+                    android:hint="Masa Berlaku (MM/YY)">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:layout_weight="2">
+                <EditText
+                    android:layout_width="@dimen/d80"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/s14"
+                    android:hint="CVV"
+                    >
+
+                </EditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d30"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simpan Kartu Untuk Pembayaran Berikutnya"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="3">
+        <Button
+            android:layout_width="@dimen/d170"
+            android:layout_height="@dimen/d40"
+            android:textColor="@color/white"
+            android:text="BAYAR"
+            android:background="@drawable/green_button"/>
+    </LinearLayout>
+</LinearLayout>

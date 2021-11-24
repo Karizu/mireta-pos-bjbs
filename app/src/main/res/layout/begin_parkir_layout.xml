@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/d70">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/transport"
+                android:layout_gravity="center"
+                android:id="@+id/car"/>
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELAMAT DATANG"
+                android:textSize="@dimen/s25"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/d20"
+                />
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/begin_parking"
+                android:paddingLeft="@dimen/d20"
+                android:paddingRight="@dimen/d20"
+                android:layout_marginTop="@dimen/d10"
+                android:textAlignment="center"
+                android:textSize="@dimen/s15"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="@dimen/d170"
+            android:layout_height="@dimen/d40"
+            android:text="Selesai Parkir"
+            android:textColor="@color/white"
+            android:id="@+id/finish_parking_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/d30"
+            android:background="@drawable/green_button"/>
+    </RelativeLayout>
+
+</LinearLayout>

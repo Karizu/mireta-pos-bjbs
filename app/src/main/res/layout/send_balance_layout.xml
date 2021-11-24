@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/d20">
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor Penerima"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d40"
+                android:inputType="phone"
+                android:id="@+id/sender_mobile"/>
+
+            <ImageView
+                android:layout_width="@dimen/d30"
+                android:layout_height="@dimen/d30"
+                android:src="@drawable/phone_book"
+                android:id="@+id/phone_book"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        
+
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d30"
+            android:text="Nominal Saldo Dikirim"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:inputType="numberDecimal"
+            android:hint="Rp 50.000"
+            android:id="@+id/amount_transfer"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:inputType="text"
+            android:layout_marginTop="@dimen/d30"
+            android:hint="Catatan (optional)"
+            android:id="@+id/notes_transfer"/>
+        <Button
+            android:layout_width="@dimen/d150"
+            android:layout_height="@dimen/d40"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/d70"
+            android:text="@string/kirim"
+            android:textColor="@color/white"
+            android:id="@+id/send_btn"
+            android:background="@drawable/green_button"/>
+    </LinearLayout>
+</LinearLayout>

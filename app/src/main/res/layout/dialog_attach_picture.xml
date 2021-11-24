@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/charcoal"
+        android:orientation="horizontal">
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginLeft="60dp"
+            android:text="Tambah Gambar"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/dlgAttchPicture_btnClose"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="20dp"
+            android:src="@drawable/ic_x_white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dlgAttchPicture_chooseCamera"
+        android:background="@drawable/selector_background_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_camera"/>
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:layout_weight="1"
+            android:text="Dari Kamera"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/charcoal"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="@dimen/d1" android:layout_marginRight="20dp" android:layout_marginLeft="20dp"  android:alpha="0.5" android:background="@color/starDust_opacity_60" />
+
+    <LinearLayout
+        android:id="@+id/dlgAttchPicture_chooseGalery"
+        android:background="@drawable/selector_background_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_galery"/>
+
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_weight="1"
+            android:text="Pilih dari foto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/charcoal"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/ll"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:contentDescription="TODO"
+            android:src="@mipmap/ic_launcher" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/ll2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:contentDescription="TODO"
+            android:src="@mipmap/ic_launcher" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/ll3"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:contentDescription="TODO"
+            android:src="@mipmap/ic_launcher" />
+    </FrameLayout>
+</LinearLayout>

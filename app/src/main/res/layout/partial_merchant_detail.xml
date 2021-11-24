@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/container_merchant_header"
+            android:layout_height="@dimen/d200">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="0dp"
+                android:id="@+id/layout_image_user"
+                android:background="@drawable/default_layout_merchant"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:padding="@dimen/d10"
+                android:layout_marginTop="@dimen/d5">
+                <ImageView
+                    android:layout_width="@dimen/d30"
+                    android:layout_height="@dimen/d30"
+                    android:layout_margin="@dimen/d5"
+                    android:src="@drawable/ic_call"
+                    android:background="@drawable/border_circle_full_black"
+                    android:id="@+id/callButton"
+                    android:padding="@dimen/d7"/>
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="@dimen/d30"
+                    android:layout_height="@dimen/d30"
+                    android:layout_margin="@dimen/d5"
+                    android:src="@drawable/ic_share"
+                    android:background="@drawable/border_circle_full_black"
+                    android:padding="@dimen/d7"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d300"
+                android:background="@drawable/bg_black_gradient_transparent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true">
+                <com.mikhaellopez.circularimageview.CircularImageView
+
+                    android:id="@+id/frgMerchantDetail_profilePicture"
+                    android:layout_width="@dimen/d70"
+                    android:layout_height="@dimen/d70"
+                    android:src="@drawable/default_image_merchant"
+                    app:civ_border_color="@color/silver_light"
+                    app:civ_shadow_color="@color/clear"
+                    app:civ_border_width="0dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    android:padding="@dimen/d15"
+                    android:layout_marginRight="@dimen/d10"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                            android:id="@+id/frgMerchantDetail_merchantName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Merchant Name"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/s20"/>
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:visibility="gone"
+                            android:id="@+id/badge_premium"
+                            android:layout_toRightOf="@+id/frgMerchantDetail_merchantName"
+                            android:src="@drawable/premium_merchant_badge"/>
+                    </RelativeLayout>
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type_merchant"
+                        android:text="Offline Shop, Online Shop"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/bayarButton"
+                    android:layout_width="@dimen/d50"
+                    android:layout_height="@dimen/d50"
+                    android:src="@drawable/ic_qr"
+                    android:tint="@color/white"
+                    android:padding="@dimen/d15"
+                    android:layout_margin="@dimen/d15"
+                    android:background="@drawable/border_circle_full_blue"/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/frgMerchantDetail_profilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/d15"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:visibility="gone"
+                    android:gravity="center">
+
+                    <ToggleButton
+                        android:id="@+id/frgMerchantDetail_btnFavorite"
+                        android:layout_width="150dp"
+                        android:layout_height="32dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/border_rounded_gray"
+                        android:textColor="@color/black"
+                        android:text="FAVORIT"
+                        android:textOff="FAVORIT"
+                        android:textOn="FAVORIT" />
+
+                </LinearLayout>
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:id="@+id/frgMerchantDetail_merchantDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra placerat augue non consequat. Maecenas dui neque, gravida quis metus ut, convallis hendrerit tellus. Maecenas eget laoreet purus. Donec odio nulla, euismod vitae diam ac, facilisis molestie sapien. Suspendisse neque ex, rutrum in aliquam non, vehicula eu nisi. Suspendisse vel arcu justo. Pellentesque ipsum arcu, posuere ac velit a, vestibulum blandit nulla. Nulla tempor magna eget neque feugiat, eu vestibulum metus lacinia. Maecenas porttitor lorem ut accumsan mattis. Praesent bibendum mi massa, et lobortis lacus luctus non. Integer eleifend ex quis sodales finibus."
+                    android:textSize="@dimen/s12"
+                    android:textColor="@color/light_gray"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/popularity_text"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/curiousBlue"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/container_all"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    android:background="@drawable/border_rounded_green">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_green_phone"/>
+
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/green_ligth"
+                        android:textAlignment="center"
+                        android:text="HUBUNGI"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/d15">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO. TELEPON"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phone_number"
+                    android:textColor="@color/green_forest.secondary"
+                    android:text="081234567890"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRODUK POPULER"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/product_merchant"
+                    android:text="Stroller, Baby Swim Suit, Baby Box"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KISARAN HARGA"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/range_price"
+                    android:text="Rp 50.000 - Rp 750.000"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/s12"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/info_merchant"
+                        android:textColor="@color/white"
+                        android:text="LINE Official : @YK23ZD"/>
+                </LinearLayout>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:id="@+id/frgMerchantDetail_merchantNameBelow"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:text="Merchant Name"
+                    android:textColor="@color/white"/>
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:id="@+id/frgMerchantDetail_merchantDescriptionBelow"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Merchant Desscription"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="Merchant Name"
+            android:textColor="@color/white"/>
+            <fragment
+                android:id="@+id/merchant_maps"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" />
+    </LinearLayout>
+</ScrollView>

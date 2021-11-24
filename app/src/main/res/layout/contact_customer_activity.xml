@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/toolbar_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:padding="@dimen/d15">
+        <EditText
+            android:id="@+id/contact_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:hint="Ketik nama.."
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/border_round_light_gray"
+            android:padding="@dimen/d7"
+            android:singleLine="true"
+            android:textSize="13sp"/>
+    </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

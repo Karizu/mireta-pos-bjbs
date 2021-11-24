@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/success_deal_background">
+    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SELAMAT !"
+        android:textColor="#14489C"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/d170"/>
+
+    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anda berhasil mendapatkan voucher"
+        android:textAlignment="center"/>
+
+    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/d10"
+        android:paddingLeft="@dimen/d20"
+        android:paddingRight="@dimen/d20"
+        android:text="Untuk redeem voucher, silahkan berikan atau tunjukan kepada merchant kode voucher berikut :"/>
+
+    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="37sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/d20"
+        android:layout_marginBottom="@dimen/d20"
+        android:text="SENY40BLH"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d60"
+        android:background="@drawable/dot_border"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/d40"
+        android:layout_marginLeft="@dimen/d40"
+        android:gravity="center_vertical">
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d10"
+            android:text="Atau simpan Voucher"/>
+        <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textColor="#14489C"
+            android:layout_marginRight="@dimen/d20"
+            android:gravity="right"/>
+    </LinearLayout>
+
+    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/d20"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10"
+        android:text="Kode voucher hanya berlaku untuk sekali penukaran"/>
+
+    <Button
+        android:layout_width="@dimen/d150"
+        android:layout_height="@dimen/d40"
+        android:text="selesai"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d30"
+        android:textColor="@color/white"
+        android:id="@+id/finish_deal"
+        android:background="@drawable/green_button"/>
+</LinearLayout>

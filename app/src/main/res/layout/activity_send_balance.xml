@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/d20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/d25"
+                android:background="@drawable/border_round_blue_contact"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dest_image_contact"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_avatar" />
+
+                <TextView
+                    android:id="@+id/dest_cust_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d15"
+                    android:padding="@dimen/d3"
+                    android:layout_marginLeft="@dimen/d5"
+                    android:text="Caroline"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/d20" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/d20"
+            android:layout_marginTop="@dimen/d15">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d30"
+                android:padding="10dp"
+                android:background="@drawable/border_rounded_big_blue"
+                android:src="@drawable/ic_idr" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:background="@color/white"
+                android:hint="0"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_marginHorizontal="@dimen/d80"
+                android:textStyle="bold"
+                android:textColor="#0080bb"
+                android:imeOptions="actionDone"
+                android:textSize="@dimen/d40" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d5"
+            android:layout_marginRight="@dimen/d5"
+            android:background="@drawable/border_round_blue_gradient"
+            android:textColor="@color/white"
+            android:text="KIRIM"
+            android:id="@+id/send_btn"
+            android:textSize="15dp"
+            android:layout_margin="@dimen/d15"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

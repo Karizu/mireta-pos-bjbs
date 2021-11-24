@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/d30">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/donate_two"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d20"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rumah Sehat BAZNAS"
+                    android:textSize="@dimen/d20"/>
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Badan Amil Zakat Nasional"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d40"
+                    android:text="DONASI"
+                    android:textColor="@color/white"
+                    android:background="@drawable/green_button"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

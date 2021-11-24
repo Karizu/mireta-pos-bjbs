@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container_topup_credit"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOP UP Saldo"
+                    android:id="@+id/cc_title"/>
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/amount_topup"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 105.000"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_visa_master"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp">
+
+            <!--<com.wrapp.floatlabelededittext.FloatLabeledEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--&gt;-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Kartu"/>
+
+                <EditText
+                    android:id="@+id/no_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:cursorVisible="true"
+                    android:maxLength="19"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--</com.wrapp.floatlabelededittext.FloatLabeledEditText>-->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/scan_card"
+                android:src="@drawable/icn_camera"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exp. Month"
+                    />
+
+                <EditText
+                    android:id="@+id/exp_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exp. Year"/>
+
+                <EditText
+                    android:id="@+id/exp_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CVV/CVC"/>
+
+                <EditText
+                    android:id="@+id/cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:cursorVisible="true"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan Kartu Untuk Pembayaran Berikutnya"
+            android:id="@+id/save_card"
+            android:layout_margin="15dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/next_btn"
+                android:textColor="@color/white"
+                android:text="Bayar"
+                android:background="@drawable/green_button"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

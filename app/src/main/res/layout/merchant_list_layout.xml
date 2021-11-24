@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/d10"
+        android:background="@drawable/border_round_light_gray"
+        android:focusableInTouchMode="true">
+        <ImageView
+            android:layout_width="@dimen/d25"
+            android:layout_height="@dimen/d25"
+            android:src="@drawable/ic_magni"
+            android:layout_margin="@dimen/d10"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="Cari"
+            android:id="@+id/search_input"
+            android:background="@color/transparent"
+            />
+        <ImageView
+            android:layout_width="@dimen/d25"
+            android:layout_height="@dimen/d25"
+            android:src="@drawable/ic_qr"
+            android:layout_margin="@dimen/d10"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/merchants"/>
+</LinearLayout>

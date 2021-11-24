@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_round_white"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/restock"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/border_round_gradient_8dp"
+            android:layout_toStartOf="@+id/report"
+            android:layout_marginEnd="@dimen/d5"
+            android:layout_marginTop="@dimen/d4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/restocks"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@drawable/restock"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d8"
+                android:gravity="center"
+                android:text="Restock"
+                android:textSize="12sp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/report"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/d4"
+            android:background="@drawable/border_round_gradient_8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@drawable/report"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Laporan"
+                android:textSize="12sp"
+                android:layout_marginBottom="@dimen/d8"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/setting"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toEndOf="@+id/report"
+            android:layout_marginTop="@dimen/d4"
+            android:layout_marginStart="@dimen/d5"
+            android:background="@drawable/border_round_gradient_8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pengaturan"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pengaturan"
+                android:textSize="12sp"
+                android:layout_marginBottom="@dimen/d8"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

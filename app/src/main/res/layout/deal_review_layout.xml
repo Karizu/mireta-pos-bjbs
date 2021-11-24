@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/d20"
+        android:background="@drawable/background_deals_detail">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d130"
+                android:layout_marginTop="@dimen/d10"
+                android:padding="@dimen/d10"
+                android:id="@+id/deal_img"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/s10"
+                android:padding="@dimen/d10"
+                android:id="@+id/deal_title"/>
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/s10"
+                android:paddingRight="@dimen/d10"
+                android:paddingLeft="@dimen/d10"
+                android:id="@+id/deal_subtitle"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d5"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:textColor="#797979"
+                android:textSize="@dimen/s10"
+                android:text="Detail"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:textSize="@dimen/s10"
+                android:layout_marginTop="@dimen/d5"
+                android:text="-"
+                />
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d20"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:textColor="#797979"
+                android:textSize="@dimen/s10"
+                android:text="@string/syarat_ketentuan"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:textSize="@dimen/s10"
+                android:layout_marginTop="@dimen/d5"
+                android:text="-"
+                />
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d20"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:textColor="#797979"
+                android:textSize="@dimen/s10"
+                android:text="Lokasi"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:layout_marginTop="@dimen/d5"
+                android:textSize="@dimen/s10"
+                android:text="-"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="4.5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/d20"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deal_point"
+                        android:textSize="30sp"
+                        android:textColor="#14489C"/>
+                    <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:text="Point"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/s10"
+                    android:id="@+id/deal_expired"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="2">
+                <Button
+                    android:layout_width="@dimen/d80"
+                    android:layout_height="@dimen/d40"
+                    android:text="AMBIL"
+                    android:id="@+id/redeem_btn"
+                    android:background="@drawable/border_round_light_blue"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

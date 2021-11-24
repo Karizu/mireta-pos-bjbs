@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_white_shadowed"
+    android:layout_margin="@dimen/d5">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container_promo"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d100"
+            android:id="@+id/container_image_promo"
+            >
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d100"
+                android:id="@+id/image_promo"
+                android:visibility="visible"
+                android:scaleType="centerCrop"
+                android:src="@drawable/donate_two"
+                android:layout_margin="1dp"
+                app:riv_corner_radius="10dp"
+                app:riv_border_width="0dp"/>
+
+            <ProgressBar
+                android:layout_centerHorizontal="true"
+                android:id="@+id/progressBar"
+                android:layout_centerVertical="true"
+                android:progressTint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d40"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/d10"
+            android:layout_marginBottom="@dimen/d10"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promo Title"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:id="@+id/title_promo"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Promo Info"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/green_ligth"
+                android:id="@+id/info_promo"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

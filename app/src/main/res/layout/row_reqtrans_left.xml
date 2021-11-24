@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:paddingLeft="7dp"
+    android:gravity="left"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:id="@+id/message_body"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/chat_buble_left"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:textColor="#fff"
+        android:textSize="18dp">
+
+        <LinearLayout
+            android:layout_width="155dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:orientation="vertical"
+            android:padding="@dimen/d10"
+            android:background="@drawable/chat_bubble_top">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_tv"
+                    android:text="REQUEST"
+                    android:textSize="@dimen/d10"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/d7"
+                    android:id="@+id/checklist_iv"
+                    android:layout_width="@dimen/d13"
+                    android:layout_height="@dimen/d13"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/checklist"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/d4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/amount_tv"
+                    android:text="Rp 1.000.000"
+                    android:textSize="@dimen/d22"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="#fff" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="155dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/status_action_tv"
+                    android:text="TUNGGU"
+                    android:textSize="@dimen/d13"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:id="@+id/arrow_detail_iv"
+                    android:layout_width="@dimen/d13"
+                    android:layout_height="@dimen/d13"
+                    android:layout_marginLeft="@dimen/d7"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:id="@+id/chat"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

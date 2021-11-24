@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/d30">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:id="@+id/container_selected_program">
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Program"
+                android:id="@+id/selected_program"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:layout_width="@dimen/d40"
+                android:layout_height="@dimen/d40"
+                android:layout_marginRight="@dimen/d5"
+                android:src="@drawable/icon_baznas"
+                android:layout_alignParentRight="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d1"
+                android:background="@color/starDust_opacity_40"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_selected_program"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/d20"
+            android:background="@drawable/border_round_white"
+            android:padding="@dimen/d20">
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:text="Zakat"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:text="Infak / Sedekah"/>
+
+            <com.boardinglabs.mireta.standalone.component.fontview.RobotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donasi Kemanuasian"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="@dimen/d150"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/next_btn"
+            android:text="lanjutkan"
+            android:textColor="@color/white"
+            android:background="@drawable/green_button"/>
+    </RelativeLayout>
+</LinearLayout>
