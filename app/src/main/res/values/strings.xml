@@ -4,7 +4,7 @@
         <item quantity="other">there are %d participants</item>
     </plurals>
 
-    <string name="app_name">Mireta POS</string>
+    <string name="app_name">BJBS Cashless</string>
     <string name="saldo">Saldo</string>
     <string name="topup">TOP UP</string>
     <string name="topup_saldo" tools:ignore="MissingTranslation">TOP UP SALDO</string>

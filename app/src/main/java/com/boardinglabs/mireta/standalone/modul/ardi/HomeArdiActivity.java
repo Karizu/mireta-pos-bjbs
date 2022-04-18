@@ -336,7 +336,7 @@ public class HomeArdiActivity extends BaseActivity {
 
     private void cekSaldo(String memberId, String member_name, String member_lulusan, String member_angkatan) {
         Loading.show(context);
-        Api.apiInterface().cekSaldo(memberId, Constant.PARTNER_ID_NURUL_FIKRI, "Bearer " + PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse<Members>>() {
+        Api.apiInterface().cekSaldo(memberId, "Bearer " + PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse<Members>>() {
             @Override
             public void onResponse(Call<ApiResponse<Members>> call, Response<ApiResponse<Members>> response) {
                 Loading.hide(context);

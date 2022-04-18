@@ -595,7 +595,7 @@ public class PembayaranActivity extends BaseActivity implements ItemsView, Commo
 
     private void cekSaldo(String member_id){
         Loading.show(context);
-        Api.apiInterface().cekSaldo(member_id, Constant.PARTNER_ID_NURUL_FIKRI, "Bearer "+ PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse<Members>>() {
+        Api.apiInterface().cekSaldo(member_id, "Bearer "+ PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse<Members>>() {
             @Override
             public void onResponse(Call<ApiResponse<Members>> call, Response<ApiResponse<Members>> response) {
                 Loading.hide(context);

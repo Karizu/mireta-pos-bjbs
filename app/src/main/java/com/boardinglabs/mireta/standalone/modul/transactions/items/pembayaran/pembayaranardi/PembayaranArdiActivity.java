@@ -521,7 +521,8 @@ public class PembayaranArdiActivity extends BaseActivity implements ItemsView, C
         formatOrderNo = format;
 
         totalPrice = mTotal;
-        transactionPost = new TransactionPost(loginStockLocation.location_id, format, totalQty, totalPrice + "", 1, 2, 2, details, Constant.PARTNER_ID_NURUL_FIKRI, partner_acc_no);
+//        transactionPost = new TransactionPost(loginStockLocation.location_id, format, totalQty, totalPrice + "", 1, 2, 2, details, Constant.PARTNER_ID_NURUL_FIKRI, partner_acc_no);
+        transactionPost = new TransactionPost(loginStockLocation.location_id, format, totalQty, totalPrice + "", 1, 2, 2, details, "", partner_acc_no);
 
         Gson gson = new Gson();
         String json = gson.toJson(transactionPost);
@@ -785,7 +786,7 @@ public class PembayaranArdiActivity extends BaseActivity implements ItemsView, C
 
     private void cekSaldo(String member_id) {
         Loading.show(context);
-        Api.apiInterface().cekSaldo(member_id, Constant.PARTNER_ID_NURUL_FIKRI, "Bearer " + PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse<Members>>() {
+        Api.apiInterface().cekSaldo(member_id, "Bearer " + PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse<Members>>() {
             @Override
             public void onResponse(Call<ApiResponse<Members>> call, Response<ApiResponse<Members>> response) {
                 Loading.hide(context);
@@ -828,7 +829,7 @@ public class PembayaranArdiActivity extends BaseActivity implements ItemsView, C
                     .addFormDataPart("amount", mTotal + "")
                     .addFormDataPart("date", date)
                     .addFormDataPart("sc", pin)
-                    .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                    .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                     .build();
         } else {
             requestBody = new MultipartBody.Builder()
@@ -838,7 +839,7 @@ public class PembayaranArdiActivity extends BaseActivity implements ItemsView, C
                     .addFormDataPart("business_name", loginBusiness.name)
                     .addFormDataPart("transaction_code", formatOrderNo)
                     .addFormDataPart("amount", mTotal + "")
-                    .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                    .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                     .addFormDataPart("date", date)
                     .build();
         }

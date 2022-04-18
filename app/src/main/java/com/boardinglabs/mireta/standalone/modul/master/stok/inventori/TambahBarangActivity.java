@@ -522,7 +522,7 @@ public class TambahBarangActivity extends BaseActivity {
                             .addFormDataPart("name", etNamaBarang.getText().toString())
                             .addFormDataPart("description", etDeskripsi.getText().toString())
                             .addFormDataPart("price", etHargaPieces.getText().toString())
-                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                             .addFormDataPart("image", "photo.jpeg", RequestBody.create(MediaType.parse("image/jpeg"), byteArrayOutputStream.toByteArray()))
                             .build();
                 } else {
@@ -535,7 +535,7 @@ public class TambahBarangActivity extends BaseActivity {
                             .addFormDataPart("name", etNamaBarang.getText().toString())
                             .addFormDataPart("description", etDeskripsi.getText().toString())
                             .addFormDataPart("price", etHargaPieces.getText().toString())
-                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                             .addFormDataPart("image", "photo.jpeg", RequestBody.create(MediaType.parse("image/jpeg"), byteArrayOutputStream.toByteArray()))
                             .build();
                 }
@@ -551,7 +551,7 @@ public class TambahBarangActivity extends BaseActivity {
                             .addFormDataPart("name", etNamaBarang.getText().toString())
                             .addFormDataPart("description", etDeskripsi.getText().toString())
                             .addFormDataPart("price", etHargaPieces.getText().toString())
-                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                             .addFormDataPart("image", file.getName(), RequestBody.create(MediaType.parse("image/*"), file))
                             .build();
                 } else {
@@ -564,7 +564,7 @@ public class TambahBarangActivity extends BaseActivity {
                             .addFormDataPart("name", etNamaBarang.getText().toString())
                             .addFormDataPart("description", etDeskripsi.getText().toString())
                             .addFormDataPart("price", etHargaPieces.getText().toString())
-                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                             .addFormDataPart("image", file.getName(), RequestBody.create(MediaType.parse("image/*"), file))
                             .build();
                 }
@@ -579,7 +579,7 @@ public class TambahBarangActivity extends BaseActivity {
                             .addFormDataPart("name", etNamaBarang.getText().toString())
                             .addFormDataPart("description", etDeskripsi.getText().toString())
                             .addFormDataPart("price", etHargaPieces.getText().toString())
-                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                             .build();
                 } else {
                     requestBody = new MultipartBody.Builder()
@@ -591,7 +591,7 @@ public class TambahBarangActivity extends BaseActivity {
                             .addFormDataPart("name", etNamaBarang.getText().toString())
                             .addFormDataPart("description", etDeskripsi.getText().toString())
                             .addFormDataPart("price", etHargaPieces.getText().toString())
-                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
+//                            .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI)
                             .build();
                 }
             }

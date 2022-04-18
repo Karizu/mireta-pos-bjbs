@@ -89,13 +89,13 @@ public interface NetworkService {
 //        String BASE_NEW_URL_LOCAL = "http://37.72.172.144/mireta-selada/public/api/";
     String BASE_MIRETA_DEV = "http://36.94.58.181/api/mireta-pos/public/index.php/api/";
     String BASE_MIRETA_PROD = "http://36.94.58.178/api/mireta-pos/public/index.php/api/";
-    String BASE_NEW_URL_LOCAL = BASE_MIRETA_PROD;
+    String BASE_NEW_URL_LOCAL = BASE_MIRETA_DEV;
     //    String BASE_NEW_URL_LOCAL = "http://37.72.172.144/mireta-pos/public/api/";
 //    String BASE_ARDI = "http://192.168.1.9/ardi-api/public/api/";
 
     String BASE_ARDI_DEV = "http://36.94.58.181/api/ardi-api/public/index.php/api/";
     String BASE_ARDI_PROD = "http://36.94.58.178/api/ardi-api/public/index.php/api/";
-    String BASE_ARDI = BASE_ARDI_PROD;
+    String BASE_ARDI = BASE_ARDI_DEV;
 //    String BASE_ARDI = "http://37.72.172.144/ardi-api/public/api/";
 
     @FormUrlEncoded
@@ -574,6 +574,10 @@ public interface NetworkService {
     @GET("members/{member_id}")
     Call<ApiResponse<Members>> cekSaldo(@Path("member_id") String member_id,
                                         @Query("partnerID") String partner_id,
+                                        @Header("Authorization") String token);
+
+    @GET("members/{member_id}")
+    Call<ApiResponse<Members>> cekSaldo(@Path("member_id") String member_id,
                                         @Header("Authorization") String token);
 
     @POST("transactions")

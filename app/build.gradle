@@ -23,7 +23,6 @@ repositories {
     maven { url "https://jitpack.io" }
     maven { url 'http://jzaccone.github.io/SlidingMenu-aar' }
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-    maven { url "http://dl.bintray.com/pt-midtrans/maven" }
     maven { url 'https://maven.fabric.io/public' }
     maven { url 'https://maven.google.com' }
     maven { url 'http://jzaccone.github.io/SlidingMenu-aar' }
@@ -188,7 +187,6 @@ android {
         pickFirst('lib/armeabi-v7a/libDecodeWlt.so')
     }
 }
-
 
 ext { libSupportVersion = '27.0.2' }
 ext { libGoogle = '11.4.2' }

@@ -221,7 +221,7 @@ public class RegisterMember extends AppCompatActivity {
                     .addFormDataPart("phone", input_phone.getText().toString())
                     .addFormDataPart("card_number", UID)
                     .addFormDataPart("pin_state", "2")
-                    .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI) //hardcode partner id nurul fikri
+//                    .addFormDataPart("partnerID", Constant.PARTNER_ID_NURUL_FIKRI) //hardcode partner id nurul fikri
                     .build();
 
             Api.apiInterface().doRegisterMember(requestBody, "Bearer " + PreferenceManager.getSessionTokenArdi()).enqueue(new Callback<ApiResponse>() {
